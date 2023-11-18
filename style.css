@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("Ubuntu/Ubuntu-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("Ubuntu/Ubuntu-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Style header info */
+#name {
+  color: black;
+  font-size: 40px;
+}
+
+#professional {
+  color: grey;
+  font-size: 22px;
+}
+
+#description {
+  color: black;
+  font-size: 18px;
+  text-align: justify;
+}
+
+@media (max-width: 700px) {
+  #description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.header { grid-area: header; }
+.email { grid-area: email; }
+.phone { grid-area: phone; }
+.linkedin { grid-area: linkedin; }
+.github { grid-area: github; }
+.main { grid-area: main; }
+.side { grid-area: side; }
+
+/* Style the body */
+body {
+  display: grid;
+  grid-template-areas:
+    'header header header header header'
+    'email email email phone phone'
+    'linkedin linkedin linkedin github github'
+    'main main main side side';
+  font-family: Ubuntu;
+}
+
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Header/logo Title */
+.header {
+  padding: 20px 60px 20px 43px;
+  text-align: left;
+  background: white;
+  color: black;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  /* display: grid; */
+  /* grid-template-columns: 59% 41%; */
+  background-color: #f1f1f1;
+  color: black;
+  padding: 14px 0px 14px 0px;
+  text-decoration: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+/* Style SVG icons */
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #4685c6
+}
+
+.email, .linkedin {
+  padding-left: 40px;
+}
+
+@media (max-width: 724px) {
+  .icon {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 390px) {
+  .navbar {
+    font-size: 12px;
+  }
+}
+
+/* Change color on hover */
+.navbar:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  /* flex: 38%; */
+  padding: 20px 40px 20px 0px;
+}
+
+@media (max-width: 700px) {
+  .side {
+    padding: 0px 40px 20px 40px;
+  }
+}
+
+/* Main column */
+.main {
+  /* flex: 62%; */
+  background-color: white;
+  padding: 20px 40px 10px 40px;
+}
+
+@media (max-width: 700px) {
+  .main {
+    padding: 20px 40px 0px 40px;
+  }
+}
+
+/** Style texts in section */
+.title {
+  color: #4685c6;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.subtitle {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.subtext {
+  color: grey;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.tasks span {
+  color: black;
+  font-size: 16px;
+  text-align: justify;
+  padding-right: 20px;
+  line-height: 25px;
+}
+
+.tasks span::before {
+  content: "– ";
+  color: #4685c6;
+}
+
+/** Style section and header */
+.section {
+  margin-bottom: 30px;
+}
+
+.section p, .header p {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+/** Style skills section */
+#skillgrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#skillgrid span {
+  font-size: 16px;
+  background-color: #90b6dd;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/** Style languages section */
+#languages {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#languages span {
+  color: black;
+}
+
+#languages .subtext {
+  color: #90b6dd;
+}
+
+/** Style interests section */
+#interestgrid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#interestgrid span {
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: grey;
+  border-width: 2px;
+}
+
+/* Footer */
+#footer {
+  padding: 30px;
+  text-align: center;
+}
