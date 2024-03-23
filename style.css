@@ -53,8 +53,10 @@ body {
   display: grid;
   grid-template-areas:
     'header header header header header'
-    'email email email phone phone'
-    'linkedin linkedin linkedin github github'
+    'email email email email email'
+    'phone phone phone phone phone'
+    'linkedin linkedin linkedin linkedin linkedin'
+    'github github github github github'
     'main main main side side';
   font-family: Ubuntu;
 }
@@ -85,6 +87,7 @@ body {
   text-align: left;
   display: flex;
   align-items: center;
+  padding-left: 40px;
 }
 
 /* Style SVG icons */
@@ -171,12 +174,12 @@ body {
 .subtext {
   color: grey;
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .tasks span {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   text-align: justify;
   padding-right: 20px;
   line-height: 25px;
